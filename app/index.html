@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scheduleApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="styles/mystyle.css" rel="stylesheet">
+    <script type="text/javascript" src="../bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script type="text/javascript" src="../bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="../bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+
+
+<div ui-view="header"></div>
+<div ui-view="content"></div>
+<div ui-view="footer"></div>
+
+
+
+<!--<script>-->
+    <!--var app = angular.module('scheduleApp',[]);-->
+    <!--app.controller('groupController', function() {-->
+        <!--var schedule = [-->
+            <!--{-->
+                <!--time: "9.00 - 10.35",-->
+                <!--lesson: "History",-->
+                <!--room: "111"-->
+            <!--},-->
+            <!--{-->
+                <!--time: "10.45 - 12.20",-->
+                <!--lesson: "Geography",-->
+                <!--room: "202"-->
+            <!--},-->
+            <!--{-->
+                <!--time: "12.30 - 14.05",-->
+                <!--lesson: "WebUI",-->
+                <!--room: "605"-->
+            <!--},-->
+            <!--{-->
+                <!--time: "14.15 - 15.50",-->
+                <!--lesson: "Java",-->
+                <!--room: "605"-->
+            <!--},-->
+            <!--{-->
+                <!--time: "16.00 - 17.30",-->
+                <!--lesson: "English",-->
+                <!--room: "910"-->
+            <!--}-->
+        <!--]-->
+
+        <!--this.schedule = schedule-->
+    <!--});-->
+<!--//</script>-->
+
+<!-- build:js scripts/main.js -->
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="../app/scripts/app.js"></script>
+<script src="../app/scripts/controllers.js"></script>
+<script src="../app/scripts/services.js"></script>
+<!-- endbuild -->
+
+<!--<link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.css">-->
+<!-- jquery, moment, and angular have to get included before fullcalendar -->
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+<body>
+
+<div class="container">
+    <div class="row row-content" ng-controller="GroupController as groupCtrl">
+        <div class="panel panel-info">
+            <div class="panel-heading">Date from datepicker</div>
+            <!-- Table -->
+            <table class="table table-hover" id="scheduleDate" ng-repeat="schedule in groupCtrl.schedule">
+                <thead>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td>{{schedule.time}}</td>
+                    <td>{{schedule.lesson}}</td>
+                    <td>{{schedule.room}}</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
