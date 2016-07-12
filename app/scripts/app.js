@@ -2,7 +2,7 @@
  * Created by olga on 10.07.16.
  */
 'use strict';
-
+var app = angular.module('scheduleApp', []);
 angular.module('scheduleApp', ['ui.router'])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
@@ -12,14 +12,14 @@ angular.module('scheduleApp', ['ui.router'])
                 views: {
                     'header': {
                         templateUrl : 'views/header.html'
+                    },
+                    'content': {
+                        template : 'views/home.html',
+                        controller  : 'IndexController'
+                    },
+                    'footer': {
+                        templateUrl : 'views/footer.html'
                     }
-                    // 'content': {
-                    //     template : 'views/home.html',
-                    //     controller  : 'IndexController'
-                    // },
-                    // 'footer': {
-                    //     templateUrl : 'views/footer.html'
-                    // }
                 }
             })
             // route for the calendar page
@@ -38,7 +38,7 @@ angular.module('scheduleApp', ['ui.router'])
                 views: {
                     'content@': {
                         templateUrl : 'views/group.html',
-                        controller  : 'GroupController'
+                        controller  : 'groupScheduleController'
                     }
                 }
             });

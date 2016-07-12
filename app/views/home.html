@@ -1,6 +1,9 @@
 
 <body>
 <div class="container">
+    <button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right" type="button">
+        {{showDetails ? 'Hide Details':'Show Details'}}
+    </button>
     <div class="row">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-primary">
