@@ -50,7 +50,7 @@
 
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse schedule" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body" ng-repeat="schedule in myData">
+                    <div class="panel-body" ng-repeat="schedule in myData " ng-show="schedule.id==0">
                         {{schedule.description}}
                     </div>
 
@@ -71,8 +71,8 @@
                     </h4>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                        desc
+                    <div class="panel-body" ng-repeat="schedule in myData " ng-show="schedule.id==1">
+                        {{schedule.description}}
                     </div>
 
                     <div class="container">
@@ -92,8 +92,8 @@
                     </h4>
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                    <div class="panel-body">
-                        desc
+                    <div class="panel-body" ng-repeat="schedule in myData " ng-show="schedule.id==2">
+                        {{schedule.description}}
                     </div>
 
                 </div>
@@ -106,8 +106,8 @@
                     </h4>
                 </div>
                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                    <div class="panel-body">
-                        desc
+                    <div class="panel-body" ng-repeat="schedule in myData " ng-show="schedule.id==3">
+                        {{schedule.description}}
                     </div>
 
                     <div class="container">
@@ -127,8 +127,8 @@
                     </h4>
                 </div>
                 <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-                    <div class="panel-body">
-                        desc
+                    <div class="panel-body" ng-repeat="schedule in myData " ng-show="schedule.id==4">
+                        {{schedule.description}}
                     </div>
 
                     <div class="container">
