@@ -1,0 +1,25 @@
+<!doctype html>
+<!--<html ng-app="scheduleApp">-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule App</title>
+    <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+    <div class="container">
+        <ng-include src="'views/header.html'"></ng-include>
+        <ng-view></ng-view>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+     <script src="bower_components/requirejs/require.js" data-main="js/main.js"></script> 
+</body>
+
+</html>

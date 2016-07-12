@@ -1,0 +1,46 @@
+html {
+    overflow-y: scroll;
+}
+
+.jumbotron{
+    background-color: rgb(242, 231, 214);
+}
+
+.jumbotron centered-block{
+    width: 100%;
+}
+
+.jumbotron img{
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+
+.jumbotron h1{
+    font-size: 4em;
+}
+
+.container{
+    padding: 5px;
+}
+
+.bg-primary,
+.bg-info {
+    padding: 1em;
+}
+
+.hideBtnWrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+#dateHeader{
+    padding: 1em;
+}

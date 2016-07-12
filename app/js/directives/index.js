@@ -1,0 +1,1 @@
+define(['./datepicker.directive'], function () {});
