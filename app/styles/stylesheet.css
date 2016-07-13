@@ -41,6 +41,19 @@ html body #groupsList .header-panel h2 {
     text-align: center;
 }
 
+html body #groupsList .warning-panel {
+    border: 0.5em dashed #EF5350;
+    border-radius: 2px;
+    background-color: #EF9A9A;
+    margin: auto;
+}
+
+html body #groupsList .warning-panel h2 {
+    line-height: 2em;
+    color: white;
+    text-align: center;
+}
+
 html body #groupsSchedule {
     padding: 1em;
     margin: 1em;
@@ -125,7 +138,8 @@ html #dateHeader {
     padding: 1em;
 }
 
-html .btn, html .btn:visited {
+html .btn,
+  html .btn:visited {
     background-color: #009688;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;

@@ -3,6 +3,7 @@ $width: 100%;
 $headerColor: #3F51B5;
 $panelsColor: #80CBC4;
 $headerPanelColor: #009688;
+$warningPanelColor: #EF5350;
 $backgroundColor: #E1F5FE;
 $btnColor: #009688;
 $btnActiveColor: #00796B;
@@ -36,12 +37,23 @@ html {
                     text-align: center;
                 }
             }
+            .warning-panel {
+                border: 0.5em dashed $warningPanelColor;
+                border-radius: 2px;
+                background-color: #EF9A9A;
+                margin: auto;
+                h2 {
+                    line-height: 2em;
+                    color: white;
+                    text-align: center;
+                }
+            }
         }
         #groupsSchedule {
             padding: 1em;
             margin: 1em;
             background-color: white;
-            table{
+            table {
                 border: 2px solid black;
                 border-radius: 2px;
             }
@@ -92,7 +104,8 @@ html {
     #dateHeader {
         padding: 1em;
     }
-    .btn, .btn:visited {
+    .btn,
+    .btn:visited {
         background-color: $btnColor;
         transition: all 0.2s ease;
     }

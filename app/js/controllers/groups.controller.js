@@ -7,6 +7,8 @@ define(['./module'], function (controllers) {
         promise.then(function (data) {
             $scope.groupsList = data.groups;
         });
+        console.log($scope.groupsList);
+
     }
 });
     

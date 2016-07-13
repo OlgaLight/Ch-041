@@ -1,7 +1,7 @@
 <div id="groupsList">
     <div class="header-panel">
         <h2>Choose direction below</h2></div>
-    <div class="panel-group" id="accordion">
+    <div class="panel-group" id="accordion" ng-show="groupsList.length">
         <div class="panel panel-success" ng-repeat="group in groupsList">
             <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="{{ '#collapse' + ($index+1) }}" href=""> <span class="panel-title" ng-bind="group.name"></span> <span class="panel-title">(<span ng-bind="group.direction"></span>) </span>
             </div>
@@ -25,5 +25,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="warning-panel" ng-show="!groupsList.length">
+        <h2>No groups yet, sorry</h2>
     </div>
 </div>
