@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Schedule - AngularJS App</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="schedule">
+<div class="row"></div>
+<div class="col-md-2 col-xs-1"></div>
+<div class="col-md-8 col-xs-10 schedule-section" ng-controller="scheduleController">
+    <div class="page-header">
+        <h1>
+            Lessons schedule
+        </h1>
+    </div>
+    <div class="tabbable tabs-left">
+        <h3>Select group</h3>
+        <uib-accordion close-others="oneAtATime">
+            <uib-accordion-group heading="{{group.name}}" ng-repeat="group in groups">
+                {{group.description}}
+                <h3>Select day</h3>
+                <div class="input-group date col-md-3 col-xs-12">
+                    <input type="text" class="form-control studyday" id="G{{group.id}}_input"
+                           placeholder="mm/dd/yyyy"><span class="input-group-addon"><i
+                        class="glyphicon glyphicon-th"></i></span>
+                </div>
+                <div class="tab-pane" id="G{{group.id}}">
+                    <h3>Schedule for Group {{group.name}}</h3>
+                    <div class="table-responsive" ng-repeat="day in group.schedule.days">
+                        <table class="table table-bordered table-striped responsive-utilities">
+                            <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>{{day.day}}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="lesson in day.lessons">
+                                <td>{{lesson.time}}</td>
+                                <td class="is-visible">{{lesson.lesson}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </uib-accordion-group>
+        </uib-accordion>
+    </div>
+</div>
+<div class="col-md-2 col-xs-1"></div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
