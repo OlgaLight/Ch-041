@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scheduleApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="../app/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../app/styles/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../app/styles/mystyle.css" rel="stylesheet">
+    <script type="text/javascript" src="../bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../app/scripts/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script type="text/javascript" src="../bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="../bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row row-header">
+            <div class="col-xs-12 col-sm-2">
+                <img src="images/SHORT_LOGO_JAN2014_1.png" class="img-responsive">
+            </div>
+            <div class="col-xs-12 col-sm-8">
+                <h1>SoftServe IT academy groups info</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-primary">
+                <div class="panel-heading collapsed" role="tab" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                     aria-expanded="false" id="headingOne">
+                    <h4 class="panel-title">
+                            Group #1
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                       description
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <input type='text' class="form-control datetimepicker4"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading collapsed" role="tab" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                     aria-expanded="false" id="headingTwo">
+                    <h4 class="panel-title">
+                            Group #2
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                       desc
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <input type='text' class="form-control datetimepicker4" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading collapsed" role="tab" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                     aria-expanded="false" id="headingThree">
+                    <h4 class="panel-title">
+                            Group #3
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        desc
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <input type='text' class="form-control datetimepicker4" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-warning">
+                <div class="panel-heading collapsed" role="tab" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+                     aria-expanded="false" id="headingFour">
+                    <h4 class="panel-title">
+                            Group #4
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body">
+                       desc
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <input type='text' class="form-control datetimepicker4"  />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-danger">
+                <div class="panel-heading collapsed" role="tab" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
+                     aria-expanded="false" id="headingFive">
+                    <h4 class="panel-title">
+                            Group #5
+                    </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                    <div class="panel-body">
+                      desc
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <input type='text' class="form-control datetimepicker4" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row row-content" ng-controller="groupController as groupCtrl">
+        <div class="panel panel-info">
+            <div class="panel-heading">Date from datepicker</div>
+            <!-- Table -->
+            <table class="table table-hover" id="scheduledate" ng-repeat="schedule in groupCtrl.schedule">
+                <thead>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td>{{schedule.time}}</td>
+                    <td>{{schedule.lesson}}</td>
+                    <td>{{schedule.room}}</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var app = angular.module('scheduleApp',[]);
+    app.controller('groupController', function() {
+        var schedule = [
+            {
+                time: "9.00 - 10.35",
+                lesson: "History",
+                room: "111"
+            },
+            {
+                time: "10.45 - 12.20",
+                lesson: "Geography",
+                room: "202"
+            },
+            {
+                time: "12.30 - 14.05",
+                lesson: "WebUI",
+                room: "605"
+            },
+            {
+                time: "14.15 - 15.50",
+                lesson: "Java",
+                room: "605"
+            },
+            {
+                time: "16.00 - 17.30",
+                lesson: "English",
+                room: "910"
+            }
+        ]
+
+        this.schedule = schedule
+    });
+</script>
+
+</body>
+</html>
