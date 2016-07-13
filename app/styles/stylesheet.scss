@@ -1,0 +1,113 @@
+$myVar: rgb(242, 231, 214);
+$width: 100%;
+$headerColor: #3F51B5;
+$panelsColor: #80CBC4;
+$headerPanelColor: #009688;
+$backgroundColor: #E1F5FE;
+$btnColor: #009688;
+$btnActiveColor: #00796B;
+html {
+    overflow-y: scroll;
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: $backgroundColor;
+        .jumbotron {
+            color: #f4f4f4;
+            background-color: $headerColor;
+            .centered-block {
+                width: $width;
+            }
+            img {
+                width: 70%;
+            }
+            h1 {
+                align-self: flex-end;
+                font-size: 4em;
+            }
+        }
+        #groupsList {
+            padding: 1em;
+            .header-panel {
+                border-radius: 2px;
+                background-color: $headerPanelColor;
+                h2 {
+                    line-height: 2em;
+                    color: white;
+                    text-align: center;
+                }
+            }
+        }
+        #groupsSchedule {
+            padding: 1em;
+            margin: 1em;
+            background-color: white;
+            table{
+                border: 2px solid black;
+                border-radius: 2px;
+            }
+        }
+    }
+    .row.is-flex {
+        display: flex;
+        flex-wrap: wrap;
+        [class*='col-'] {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: center;
+        }
+    }
+    .panel {
+        border: none !important;
+    }
+    .panel-heading {
+        color: black !important;
+        background-color: $panelsColor !important;
+        border: none !important;
+        transition: all 0.2s ease;
+    }
+    .panel-heading:active {
+        color: white !important;
+        background-color: #009688 !important;
+        transition: all 2s ease;
+        border: none !important;
+    }
+    .panel-heading:hover {
+        border: none !important;
+        transition: all 0.2s ease;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.76);
+    }
+    .container {
+        padding: 1em;
+    }
+    .bg-primary,
+    .bg-info {
+        padding: 1em;
+    }
+    .hideBtnWrap {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+    }
+    #dateHeader {
+        padding: 1em;
+    }
+    .btn, .btn:visited {
+        background-color: $btnColor;
+        transition: all 0.2s ease;
+    }
+    .btn:active {
+        background-color: $btnActiveColor !important;
+    }
+    .btn:hover {
+        background-color: white;
+        color: black;
+        border: none;
+        transition: all 0.2s ease;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.76);
+    }
+    .ui-datepicker-next,
+    .ui-datepicker-prev {
+        background-color: #ffff38;
+    }
+}

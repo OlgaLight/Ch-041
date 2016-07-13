@@ -1,35 +1,26 @@
-<div class="container">
-    <div class="panel">
-        <h1>Choose direction below</h1>
-    </div>
+<div id="groupsList">
+    <div class="header-panel">
+        <h2>Choose direction below</h2></div>
     <div class="panel-group" id="accordion">
         <div class="panel panel-success" ng-repeat="group in groupsList">
-            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="{{ '#collapse' + ($index+1) }}" href="">
-                <span class="panel-title" ng-bind="group.name"></span>
-                <span class="panel-title">(<span ng-bind="group.direction"></span>)  </span>
-
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="{{ '#collapse' + ($index+1) }}" href=""> <span class="panel-title" ng-bind="group.name"></span> <span class="panel-title">(<span ng-bind="group.direction"></span>) </span>
             </div>
             <div id="{{ 'collapse' + ($index+1) }}" class="panel-collapse collapse">
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
                             <p class="bg-primary">Group name: <b><span ng-bind="group.name" class="group-name"></span></b>
-                                <br> Direction: <b><span ng-bind="group.direction"></span></b>
-                            </p>
+                                <br> Direction: <b><span ng-bind="group.direction"></span></b> </p>
                         </div>
                         <div class="col-md-12">
-                            <p class="bg-info"><b>Description:</b> <span ng-bind="group.description"></span>
-                            </p>
+                            <p class="bg-info"><b>Description:</b> <span ng-bind="group.description"></span> </p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row is-flex">
                         <div class="col-md-6">
-                            <div datepicker>
-                            </div>
+                            <div datepicker> </div>
                         </div>
-                        <div class="col-md-6">
-                            <a class="btn btn-success btn-lg displayBtn" href="#/groupSchedule/12/05/2016/Ch-041" role="button" onclick="C:\Users\valik\Desktop\SoftServe\AngularSimple\app\table.html">Display</a>
-                        </div>
+                        <div class="col-md-6"> <a class="btn btn-success btn-lg displayBtn" href="#/groupSchedule/12/05/2016/Ch-041" role="button" onclick="C:\Users\valik\Desktop\SoftServe\AngularSimple\app\table.html">Display</a></div>
                     </div>
                 </div>
             </div>

@@ -1,34 +1,28 @@
-<div class="container">
+<div id="groupsSchedule">
     <div class="panel"><a class="btn btn-primary" href="#/groupsList" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Back to groups list</a>
     </div>
-    <p class="bg-info"> <b>Group name: <span ng-bind="groupId"></span></b>
-        <p class="bg-info"><b>Description:</b> <span ng-bind="groupData[0].description"></span>
-        </p>
-        <h1 ng-bind="date"></h1>
-        <!--
-        <h1 ng-bind="date"></h1>
-        <ol>
-            <li ng-repeat="elem in schedule.groupIds">
-                <h2 ng-bind="elem.id"></h2>
-                <ul>
-                    <li ng-repeat="date in elem.days">
-                        <h4 ng-bind="date.date"></h4>
-                    </li>
-                </ul>
-            </li>
-        </ol>
--->
 
-        <table class="table table-striped table-hover">
-            <thead>
-                <th>Time</th>
-                <th>Subject</th>
-            </thead>
-            <tbody>
-                <tr ng-repeat="lesson in foundDay[0].lessons">
-                    <td ng-bind="lesson.time"></td>
-                    <td ng-bind="lesson.name">Databases</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="bg-primary">Group name: <b><span ng-bind="groupId" class="group-name"></span></b>
+                <br> Direction: <b><span ng-bind="groupData[0].direction"></span></b> </p>
+        </div>
+        <div class="col-md-12">
+            <p class="bg-info"><b>Description:</b> <span ng-bind="groupData[0].description"></span> </p>
+        </div>
+    </div>
+    <h2 ng-bind="date"></h2>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <th>Time</th>
+            <th>Subject</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="lesson in foundDay[0].lessons">
+                <td ng-bind="lesson.time"></td>
+                <td ng-bind="lesson.name">Databases</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

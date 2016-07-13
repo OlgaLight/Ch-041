@@ -2,45 +2,149 @@ html {
     overflow-y: scroll;
 }
 
-.jumbotron{
-    background-color: rgb(242, 231, 214);
+html body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #E1F5FE;
 }
 
-.jumbotron centered-block{
+html body .jumbotron {
+    color: #f4f4f4;
+    background-color: #3F51B5;
+}
+
+html body .jumbotron .centered-block {
     width: 100%;
 }
 
-.jumbotron img{
-    display: block;
-    margin: auto;
+html body .jumbotron img {
     width: 70%;
 }
 
-.jumbotron h1{
+html body .jumbotron h1 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     font-size: 4em;
 }
 
-.container{
-    padding: 5px;
-}
-
-.bg-primary,
-.bg-info {
+html body #groupsList {
     padding: 1em;
 }
 
-.hideBtnWrap {
+html body #groupsList .header-panel {
+    border-radius: 2px;
+    background-color: #009688;
+}
+
+html body #groupsList .header-panel h2 {
+    line-height: 2em;
+    color: white;
+    text-align: center;
+}
+
+html body #groupsSchedule {
+    padding: 1em;
+    margin: 1em;
+    background-color: white;
+}
+
+html body #groupsSchedule table {
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+html .row.is-flex {
     display: -webkit-box;
-    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+html .row.is-flex [class*='col-'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+}
+
+html .panel {
+    border: none !important;
+}
+
+html .panel-heading {
+    color: black !important;
+    background-color: #80CBC4 !important;
+    border: none !important;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+html .panel-heading:active {
+    color: white !important;
+    background-color: #009688 !important;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+    border: none !important;
+}
+
+html .panel-heading:hover {
+    border: none !important;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.76);
+}
+
+html .container {
+    padding: 1em;
+}
+
+html .bg-primary,
+  html .bg-info {
+    padding: 1em;
+}
+
+html .hideBtnWrap {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 1em;
 }
 
-#dateHeader{
+html #dateHeader {
     padding: 1em;
+}
+
+html .btn, html .btn:visited {
+    background-color: #009688;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+html .btn:active {
+    background-color: #00796B !important;
+}
+
+html .btn:hover {
+    background-color: white;
+    color: black;
+    border: none;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.76);
+}
+
+html .ui-datepicker-next,
+  html .ui-datepicker-prev {
+    background-color: #ffff38;
 }
